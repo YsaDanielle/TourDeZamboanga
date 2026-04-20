@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String CATEGORY_ISLANDS = "Islands";
     private static final String CATEGORY_PARKS_NATURE = "Parks & Nature";
     private static final String CATEGORY_WATERFALLS = "Waterfalls";
+    private static final String CATEGORY_RESORTS = "Resorts";
     private static final String CATEGORY_MARKETS = "Markets";
     private static final String CATEGORY_MUSEUMS = "Museums";
     private static final String CATEGORY_RELIGIOUS = "Religious Sites";
@@ -49,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
                 findViewById(R.id.btnIslands),
                 findViewById(R.id.btnParksNature),
                 findViewById(R.id.btnWaterfalls),
+                findViewById(R.id.btnResorts),
                 findViewById(R.id.btnMarkets),
                 findViewById(R.id.btnMuseums),
                 findViewById(R.id.btnReligious),
@@ -61,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
                 CATEGORY_ISLANDS,
                 CATEGORY_PARKS_NATURE,
                 CATEGORY_WATERFALLS,
+                CATEGORY_RESORTS,
                 CATEGORY_MARKETS,
                 CATEGORY_MUSEUMS,
                 CATEGORY_RELIGIOUS,
@@ -82,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void loadLandmarks() {
         allLandmarks.add(new Landmark(
-                "Pasonanca Tree House",
+                "PASONANCA TREE HOUSE",
                 "Pasonanca Park (Maria Clara Lobregat Complex), Zamboanga City",
                 "A peaceful heritage attraction, unique elevated wooden structure offering scenic views of the surrounding forest in Pasonanca Park.",
                 "Scout Limbaga (Boys Scout)",
@@ -94,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
                 R.drawable.pasotreehouse
         ));
         allLandmarks.add(new Landmark(
-                "Great Sta. Cruz Island",
+                "GREAT STA. CRUZ ISLAND",
                 "Sta. Cruz Bank, Basilan Strait",
                 "Famous for its rare pink sand beach caused by crushed red corals, one of the most unique beaches in the Philippines.",
                 "Paseo del Mar (Boat Terminal)",
@@ -106,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
                 R.drawable.stacruzisland
         ));
         allLandmarks.add(new Landmark(
-                "Zamboanga City Hall",
+                "ZAMBOANGA CITY HALL",
                 "Valderrosa St., Zamboanga City",
                 "A historic government building reflecting Spanish-era architecture and local governance.",
                 "Plaza Rizal",
@@ -118,15 +121,15 @@ public class MainActivity extends AppCompatActivity {
                 R.drawable.cityhall
         ));
         allLandmarks.add(new Landmark(
-                "Fort Pilar",
+                "FORT PILAR SHRINE MUSEUM COMPLEX",
                 "Fort Pilar Shrine, Zamboanga City, Zamboanga del Sur",
-                "A 17th-century cultural museum showcasing Zamboanga’s history, traditions, and diverse heritage.",
+                "A cultural museum showcasing Zamboanga’s history, traditions, and diverse heritage.",
                 "Paseo del Mar",
                 "8:00 AM – 5:00 PM",
                 bullets("Prayer visit", "Museum visit", "Historical walk", "Cultural learning", "Photography"),
                 bullets("Guided tours", "Nearby souvenir stalls", "Exhibits"),
                 bullets("Shrine visit: Free", "Museum/donation fees: May apply", "Souvenirs/snacks: Optional"),
-                CATEGORY_RELIGIOUS,
+                CATEGORY_MUSEUMS,
                 R.drawable.fortpilar
         ));
         allLandmarks.add(new Landmark(
@@ -166,7 +169,7 @@ public class MainActivity extends AppCompatActivity {
                 R.drawable.sacolisland
         ));
         allLandmarks.add(new Landmark(
-                "Paseo del Mar",
+                "PASEO DEL MAR",
                 "Beside Fort Pilar",
                 "A seaside promenade where visitors can enjoy sunset views, food stalls, and access to island boat trips.",
                 "Fort Pilar",
@@ -186,8 +189,68 @@ public class MainActivity extends AppCompatActivity {
                 bullets("Swimming", "Kayak rides", "Picnics"),
                 bullets("Cottages", "Food", "Accommodations"),
                 bullets("Entrance Fee: PHP 100 - PHP 300"),
+                CATEGORY_RESORTS,
+                R.drawable.pasotreehouse
+        ));
+        allLandmarks.add(new Landmark(
+                "Cesar Climaco Freedom Park",
+                "X37G+RF7 Cesar Climaco Freedom Park, Zamboanga City, 7000 Zamboanga del Sur",
+                "A scenic public park honoring Mayor Cesar Climaco. Visitors can enjoy beautiful green spaces, walking paths, and vibrant gardens, making it an ideal spot for relaxation and leisurely strolls. The park also features playgrounds and areas for picnics, attracting both locals and tourists. Its tranquil atmosphere and picturesque scenery provide an excellent backdrop for various outdoor activities.",
+                "Helmet Tomb and Cruz Mayor",
+                "Open 24 hours",
+                bullets("Walking", "Relaxing", "Sightseeing"),
+                bullets("Benches", "Open space"),
+                bullets("Free"),
                 CATEGORY_PARKS_NATURE,
                 R.drawable.pasotreehouse
+        ));
+        allLandmarks.add(new Landmark(
+                "Tagbilat Falls",
+                "Malagandis, Titay, Zamboanga Sibugay",
+                "A hidden natural waterfall ideal for adventure seekers.",
+                "Forest trails",
+                "Day time",
+                bullets("Trekking", "Swimming"),
+                bullets("Minimal"),
+                bullets("Free or PHP 20"),
+                CATEGORY_WATERFALLS,
+                R.drawable.pasotreehouse
+        ));
+        allLandmarks.add(new Landmark(
+                "Nancy Falls",
+                "Km27, Upper La Paz, Zamboanga City",
+                "A quiet waterfall destination with natural surroundings.",
+                "Local trails",
+                "Day time",
+                bullets( "Swimming", "Relaxation"),
+                bullets("Limited"),
+                bullets("Free or PHP 20"),
+                CATEGORY_WATERFALLS,
+                R.drawable.pasotreehouse
+        ));
+        allLandmarks.add(new Landmark(
+                "FORT PILAR",
+                "Fort Pilar, Valderosa St., Sta Barbara, Zamboanga City",
+                "A 17th-century Spanish-era fort and shrine.",
+                "Paseo del Mar",
+                "Approximately 7:00 AM – 5:00 PM",
+                bullets("Prayer visit", "Museum visit", "Sightseeing"),
+                bullets("National Museum branch"),
+                bullets("Free"),
+                CATEGORY_RELIGIOUS,
+                R.drawable.fortpilar
+        ));
+        allLandmarks.add(new Landmark(
+                "PLAZA PERSHING",
+                "Don Pablo Lorenzo St, Zamboanga City",
+                "A central city plaza that has a gazebo like structure set on a park. Plaza Pershing was named after American General John \"Blackjack\" Pershing who was then a Captain in the 15th Cavalry Regiment (and the 1st Cavalry) during the counter-insurgency of the Philippine-American War.",
+                "University of Zamboanga Campus",
+                "Open 24 hours",
+                bullets("Walking", "Relaxation"),
+                bullets("Public space"),
+                bullets("Free"),
+                CATEGORY_PARKS_NATURE,
+                R.drawable.paseodelmar
         ));
     }
 

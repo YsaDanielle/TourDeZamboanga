@@ -227,6 +227,28 @@
                     app:pressedTranslationZ="1dp" />
 
                 <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnResorts"
+                    style="@style/Widget.MaterialComponents.Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp"
+                    android:layout_marginEnd="6dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:includeFontPadding="false"
+                    android:letterSpacing="0"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:minWidth="0dp"
+                    android:paddingHorizontal="14dp"
+                    android:text="Resorts"
+                    android:textAllCaps="false"
+                    android:textColor="@color/text"
+                    android:textSize="12sp"
+                    app:backgroundTint="@color/white"
+                    app:cornerRadius="100dp"
+                    app:elevation="5dp"
+                    app:pressedTranslationZ="1dp" />
+
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnMarkets"
                     style="@style/Widget.MaterialComponents.Button"
                     android:layout_width="wrap_content"
