@@ -25,6 +25,7 @@ public class DetailsActivity extends AppCompatActivity {
         TextView detailHours = findViewById(R.id.detailHours);
         TextView detailActivities = findViewById(R.id.detailActivities);
         TextView detailServices = findViewById(R.id.detailServices);
+        TextView detailEstimatedCosts = findViewById(R.id.detailEstimatedCosts);
         ImageView detailImage = findViewById(R.id.detailImage);
         ImageButton btnBack = findViewById(R.id.btnBack);
         MaterialButton btnViewMap = findViewById(R.id.btnViewMap);
@@ -37,6 +38,7 @@ public class DetailsActivity extends AppCompatActivity {
         String openingHours = intent.getStringExtra("openingHours");
         String activities = intent.getStringExtra("activities");
         String services = intent.getStringExtra("services");
+        String estimatedCosts = intent.getStringExtra("estimatedCosts");
         int image = intent.getIntExtra("image", R.drawable.blurrycityhall);
 
         detailTitle.setText(name != null ? name : getString(R.string.app_name));
@@ -46,6 +48,7 @@ public class DetailsActivity extends AppCompatActivity {
         detailHours.setText(openingHours != null ? openingHours : "Check local schedules before visiting");
         detailActivities.setText(activities != null ? activities : "Activities are coming soon.");
         detailServices.setText(services != null ? services : "Services are coming soon.");
+        detailEstimatedCosts.setText(estimatedCosts != null ? estimatedCosts : "Estimated costs are coming soon.");
         detailImage.setImageResource(image);
 
         btnBack.setOnClickListener(v -> getOnBackPressedDispatcher().onBackPressed());

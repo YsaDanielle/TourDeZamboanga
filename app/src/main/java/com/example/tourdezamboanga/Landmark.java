@@ -8,6 +8,7 @@ public class Landmark {
     private final String openingHours;
     private final String activities;
     private final String services;
+    private final String estimatedCosts;
     private final String category;
     private final int image;
 
@@ -19,6 +20,7 @@ public class Landmark {
             String openingHours,
             String activities,
             String services,
+            String estimatedCosts,
             String category,
             int image
     ) {
@@ -29,6 +31,7 @@ public class Landmark {
         this.openingHours = openingHours;
         this.activities = activities;
         this.services = services;
+        this.estimatedCosts = estimatedCosts;
         this.category = category;
         this.image = image;
     }
@@ -59,6 +62,10 @@ public class Landmark {
 
     public String getServices() {
         return services;
+    }
+
+    public String getEstimatedCosts() {
+        return estimatedCosts;
     }
 
     public String getCategory() {
