@@ -104,10 +104,11 @@
         <HorizontalScrollView
             android:id="@+id/categoryScroll"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="46dp"
             android:clipToPadding="false"
             android:paddingStart="12dp"
             android:paddingEnd="12dp"
+            android:paddingBottom="6dp"
             android:scrollbars="none">
 
             <LinearLayout
@@ -118,7 +119,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnAll"
-                    style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                    style="@style/Widget.MaterialComponents.Button"
                     android:layout_width="wrap_content"
                     android:layout_height="32dp"
                     android:layout_marginEnd="1dp"
@@ -134,12 +135,12 @@
                     android:textSize="14sp"
                     app:backgroundTint="@color/vinta_red"
                     app:cornerRadius="100dp"
-                    app:elevation="4dp"
+                    app:elevation="5dp"
                     app:pressedTranslationZ="1dp" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnHistorical"
-                    style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                    style="@style/Widget.MaterialComponents.Button"
                     android:layout_width="wrap_content"
                     android:layout_height="32dp"
                     android:layout_marginEnd="1dp"
@@ -156,12 +157,12 @@
                     android:textSize="14sp"
                     app:backgroundTint="@color/white"
                     app:cornerRadius="100dp"
-                    app:elevation="4dp"
+                    app:elevation="5dp"
                     app:pressedTranslationZ="1dp" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnIslands"
-                    style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                    style="@style/Widget.MaterialComponents.Button"
                     android:layout_width="wrap_content"
                     android:layout_height="32dp"
                     android:layout_marginEnd="1dp"
@@ -178,12 +179,12 @@
                     android:textSize="14sp"
                     app:backgroundTint="@color/white"
                     app:cornerRadius="100dp"
-                    app:elevation="4dp"
+                    app:elevation="5dp"
                     app:pressedTranslationZ="1dp" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnParks"
-                    style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                    style="@style/Widget.MaterialComponents.Button"
                     android:layout_width="wrap_content"
                     android:layout_height="32dp"
                     android:layout_marginEnd="1dp"
@@ -200,7 +201,7 @@
                     android:textSize="14sp"
                     app:backgroundTint="@color/white"
                     app:cornerRadius="100dp"
-                    app:elevation="4dp"
+                    app:elevation="5dp"
                     app:pressedTranslationZ="1dp" />
             </LinearLayout>
         </HorizontalScrollView>
