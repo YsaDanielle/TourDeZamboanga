@@ -37,7 +37,6 @@ public class LandmarkAdapter extends RecyclerView.Adapter<LandmarkAdapter.ViewHo
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Landmark landmark = landmarkList.get(position);
         holder.txtTitle.setText(landmark.getName());
-        holder.txtLocation.setText(landmark.getLocation());
 
         Glide.with(context).load(landmark.getImage()).into(holder.imgLandmark);
 
@@ -66,13 +65,11 @@ public class LandmarkAdapter extends RecyclerView.Adapter<LandmarkAdapter.ViewHo
     public static class ViewHolder extends RecyclerView.ViewHolder {
         final ImageView imgLandmark;
         final TextView txtTitle;
-        final TextView txtLocation;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             imgLandmark = itemView.findViewById(R.id.imgLandmark);
             txtTitle = itemView.findViewById(R.id.txtTitle);
-            txtLocation = itemView.findViewById(R.id.txtLocation);
         }
     }
 }

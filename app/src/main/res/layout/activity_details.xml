@@ -71,7 +71,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
                 android:fontFamily="@font/inter"
-                android:text="Brgy. Mabini, Zamboanga City"
+                android:text="Description goes here..."
                 android:textColor="#5F6368"
                 android:textSize="15sp" />
 
@@ -90,7 +90,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
                 android:fontFamily="@font/inter"
-                android:text="8:00 AM - 5:00 PM"
+                android:text="Description goes here..."
                 android:textColor="#5F6368"
                 android:textSize="15sp" />
 
@@ -102,6 +102,7 @@
                 android:fontFamily="@font/poppins_bold"
                 android:text="View on Map"
                 android:textColor="#FFFFFF"
+                android:textSize="16sp"
                 app:backgroundTint="@color/vinta_red"
                 app:cornerRadius="30dp" />
 

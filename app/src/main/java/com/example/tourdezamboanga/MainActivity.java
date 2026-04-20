@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String CATEGORY_ALL = "All";
     private static final String CATEGORY_HISTORICAL = "Historical Landmarks";
     private static final String CATEGORY_ISLANDS = "Islands";
+    private static final String CATEGORY_PARKS = "Parks";
 
     private final List<Landmark> allLandmarks = new ArrayList<>();
     private LandmarkAdapter adapter;
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private MaterialButton btnAll;
     private MaterialButton btnHistorical;
     private MaterialButton btnIslands;
+    private MaterialButton btnParks;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         btnAll = findViewById(R.id.btnAll);
         btnHistorical = findViewById(R.id.btnHistorical);
         btnIslands = findViewById(R.id.btnIslands);
+        btnParks = findViewById(R.id.btnParks);
 
         recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
 
@@ -59,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
                 "Pasonanca Park",
                 "A peaceful heritage attraction inside the park grounds, surrounded by tall trees and lush greenery.",
                 "8:00 AM - 5:00 PM",
-                CATEGORY_HISTORICAL,
+                CATEGORY_PARKS,
                 R.drawable.blurrycityhall
         ));
         allLandmarks.add(new Landmark(
@@ -100,6 +103,7 @@ public class MainActivity extends AppCompatActivity {
         btnAll.setOnClickListener(v -> selectCategory(CATEGORY_ALL));
         btnHistorical.setOnClickListener(v -> selectCategory(CATEGORY_HISTORICAL));
         btnIslands.setOnClickListener(v -> selectCategory(CATEGORY_ISLANDS));
+        btnParks.setOnClickListener(v -> selectCategory(CATEGORY_PARKS));
     }
 
     private void setupSearch() {
@@ -148,6 +152,7 @@ public class MainActivity extends AppCompatActivity {
         styleCategoryButton(btnAll, CATEGORY_ALL.equals(selectedCategory));
         styleCategoryButton(btnHistorical, CATEGORY_HISTORICAL.equals(selectedCategory));
         styleCategoryButton(btnIslands, CATEGORY_ISLANDS.equals(selectedCategory));
+        styleCategoryButton(btnParks, CATEGORY_PARKS.equals(selectedCategory));
     }
 
     private void styleCategoryButton(MaterialButton button, boolean isSelected) {
