@@ -45,7 +45,10 @@ public class LandmarkAdapter extends RecyclerView.Adapter<LandmarkAdapter.ViewHo
             intent.putExtra("name", landmark.getName());
             intent.putExtra("location", landmark.getLocation());
             intent.putExtra("description", landmark.getDescription());
+            intent.putExtra("landmarkNotes", landmark.getLandmarkNotes());
             intent.putExtra("openingHours", landmark.getOpeningHours());
+            intent.putExtra("activities", landmark.getActivities());
+            intent.putExtra("services", landmark.getServices());
             intent.putExtra("image", landmark.getImage());
             context.startActivity(intent);
         });
