@@ -121,6 +121,18 @@ public class MainActivity extends AppCompatActivity {
                 R.drawable.cityhall
         ));
         allLandmarks.add(new Landmark(
+                "FORT PILAR",
+                "Fort Pilar, Valderosa St., Sta Barbara, Zamboanga City",
+                "A 17th-century Spanish-era fort and shrine.",
+                "Paseo del Mar",
+                "Approximately 7:00 AM – 5:00 PM",
+                bullets("Prayer visit", "Museum visit", "Sightseeing"),
+                bullets("National Museum branch"),
+                bullets("Free"),
+                CATEGORY_RELIGIOUS,
+                R.drawable.fortpilar
+        ));
+        allLandmarks.add(new Landmark(
                 "FORT PILAR SHRINE MUSEUM COMPLEX",
                 "Fort Pilar Shrine, Zamboanga City, Zamboanga del Sur",
                 "A cultural museum showcasing Zamboanga’s history, traditions, and diverse heritage.",
@@ -130,10 +142,10 @@ public class MainActivity extends AppCompatActivity {
                 bullets("Guided tours", "Nearby souvenir stalls", "Exhibits"),
                 bullets("Shrine visit: Free", "Museum/donation fees: May apply", "Souvenirs/snacks: Optional"),
                 CATEGORY_MUSEUMS,
-                R.drawable.fortpilar
+                R.drawable.fortpilarmuseum
         ));
         allLandmarks.add(new Landmark(
-                "El Museo de Zamboanga",
+                "EL MUSEO DE ZAMBOANGA",
                 "219 Pasonanca Road, Pasonanca, Zamboanga City, 7000 Zamboanga del Sur",
                 "A cultural museum showcasing Zamboanga’s history focusing on its warfare and indigenous technology, tools, and instruments.",
                 "Pasonanca Butterfly Garden",
@@ -145,7 +157,7 @@ public class MainActivity extends AppCompatActivity {
                 R.drawable.elmuseodezam
         ));
         allLandmarks.add(new Landmark(
-                "Once Islas",
+                "ONCE ISLAS",
                 "Barangay Panubigan",
                 "A protected island-hopping destination known for clear waters, scenic beaches, and quiet coastal views. A group of 11 scenic islands with white sand beaches and marine biodiversity.",
                 "Panubigan Port",
@@ -157,7 +169,7 @@ public class MainActivity extends AppCompatActivity {
                 R.drawable.onceislas
         ));
         allLandmarks.add(new Landmark(
-                "Sacol Island",
+                "SACOL ISLAND",
                 "Sacol Island, Zamboanga City",
                 "A peaceful island area with coastal communities, beaches, and wide sea views.",
                 "Accessible via Paseo del Mar",
@@ -181,7 +193,7 @@ public class MainActivity extends AppCompatActivity {
                 R.drawable.paseodelmar
         ));
         allLandmarks.add(new Landmark(
-                "Azzura Beach Resort",
+                "AZZURA BEACH RESORT",
                 "36QP+77H, Zamboanga City, Zamboanga del Sur",
                 "A private beach resort with amenities and relaxing environment.",
                 "Bolong Beach",
@@ -190,10 +202,10 @@ public class MainActivity extends AppCompatActivity {
                 bullets("Cottages", "Food", "Accommodations"),
                 bullets("Entrance Fee: PHP 100 - PHP 300"),
                 CATEGORY_RESORTS,
-                R.drawable.pasotreehouse
+                R.drawable.azzura
         ));
         allLandmarks.add(new Landmark(
-                "Cesar Climaco Freedom Park",
+                "CESAR CLIMACO FREEDOM PARK",
                 "X37G+RF7 Cesar Climaco Freedom Park, Zamboanga City, 7000 Zamboanga del Sur",
                 "A scenic public park honoring Mayor Cesar Climaco. Visitors can enjoy beautiful green spaces, walking paths, and vibrant gardens, making it an ideal spot for relaxation and leisurely strolls. The park also features playgrounds and areas for picnics, attracting both locals and tourists. Its tranquil atmosphere and picturesque scenery provide an excellent backdrop for various outdoor activities.",
                 "Helmet Tomb and Cruz Mayor",
@@ -202,10 +214,10 @@ public class MainActivity extends AppCompatActivity {
                 bullets("Benches", "Open space"),
                 bullets("Free"),
                 CATEGORY_PARKS_NATURE,
-                R.drawable.pasotreehouse
+                R.drawable.climacofp
         ));
         allLandmarks.add(new Landmark(
-                "Tagbilat Falls",
+                "TAGBILAT FALLS",
                 "Malagandis, Titay, Zamboanga Sibugay",
                 "A hidden natural waterfall ideal for adventure seekers.",
                 "Forest trails",
@@ -214,10 +226,10 @@ public class MainActivity extends AppCompatActivity {
                 bullets("Minimal"),
                 bullets("Free or PHP 20"),
                 CATEGORY_WATERFALLS,
-                R.drawable.pasotreehouse
+                R.drawable.tagbilatfalls
         ));
         allLandmarks.add(new Landmark(
-                "Nancy Falls",
+                "NANCY FALLS",
                 "Km27, Upper La Paz, Zamboanga City",
                 "A quiet waterfall destination with natural surroundings.",
                 "Local trails",
@@ -226,19 +238,7 @@ public class MainActivity extends AppCompatActivity {
                 bullets("Limited"),
                 bullets("Free or PHP 20"),
                 CATEGORY_WATERFALLS,
-                R.drawable.pasotreehouse
-        ));
-        allLandmarks.add(new Landmark(
-                "FORT PILAR",
-                "Fort Pilar, Valderosa St., Sta Barbara, Zamboanga City",
-                "A 17th-century Spanish-era fort and shrine.",
-                "Paseo del Mar",
-                "Approximately 7:00 AM – 5:00 PM",
-                bullets("Prayer visit", "Museum visit", "Sightseeing"),
-                bullets("National Museum branch"),
-                bullets("Free"),
-                CATEGORY_RELIGIOUS,
-                R.drawable.fortpilar
+                R.drawable.nancyfalls
         ));
         allLandmarks.add(new Landmark(
                 "PLAZA PERSHING",
@@ -250,7 +250,115 @@ public class MainActivity extends AppCompatActivity {
                 bullets("Public space"),
                 bullets("Free"),
                 CATEGORY_PARKS_NATURE,
-                R.drawable.paseodelmar
+                R.drawable.plazapershing
+        ));
+        allLandmarks.add(new Landmark(
+                "CANELAR BARTER TRADE CENTER",
+                "Canelar District",
+                "Known as an imported goods market and trade area.",
+                "Canelar commercial area",
+                "8:00 AM – 6:00 PM",
+                bullets("Shopping"),
+                bullets("Retail stalls"),
+                bullets("Depends on purchases"),
+                CATEGORY_RELIGIOUS,
+                R.drawable.canelarbartertc
+        ));
+        allLandmarks.add(new Landmark(
+                "PASONANCA BUTTERFLY GARDEN",
+                "Pasonanca Park",
+                "Garden showcasing various butterfly species and nature.",
+                "Antonio's Mercato",
+                "8:00 AM – 6:00 PM",
+                bullets("Nature viewing", "Photography"),
+                bullets("Guided tours"),
+                bullets("PHP 20 - PHP 50"),
+                CATEGORY_PARKS_NATURE,
+                R.drawable.butterflygarden
+        ));
+        allLandmarks.add(new Landmark(
+                "PASONANCA PARK",
+                "Pasonanca District",
+                "",
+                "Antonio's Mercato",
+                "6:00 AM – 6:00 PM",
+                bullets("Nature walks", "Sightseeing"),
+                bullets("Park facilities"),
+                bullets("Free"),
+                CATEGORY_PARKS_NATURE,
+                R.drawable.pasopark
+        ));
+        allLandmarks.add(new Landmark(
+                "ZSCMST BIRD SANCTUARY",
+                "ZSCMST campus area",
+                "",
+                "University Campus",
+                "Daytime",
+                bullets("Birdwatching"),
+                bullets("Educational visits"),
+                bullets("Minimal"),
+                CATEGORY_PARKS_NATURE,
+                R.drawable.birdsanctuary
+        ));
+        allLandmarks.add(new Landmark(
+                "MERLOQUET FALLS",
+                "Barangay Sibulao",
+                "",
+                "Countryside road",
+                "Daytime",
+                bullets("Swimming", "Trekking"),
+                bullets("Cottages"),
+                bullets("PHP 20 - PHP 50"),
+                CATEGORY_WATERFALLS,
+                R.drawable.merloquetfalls
+        ));
+        allLandmarks.add(new Landmark(
+                "YAKAN WEAVING VILLAGE",
+                "Upper Calarian",
+                "",
+                "Coastal tourism corridor",
+                "8:00 AM – 5:00 PM",
+                bullets("Weaving demonstrations", "Souvenir shopping"),
+                bullets("Handicrafts"),
+                bullets("Free entry"),
+                CATEGORY_WATERFALLS,
+                R.drawable.yakanweavingvillage
+        ));
+        allLandmarks.add(new Landmark(
+                "RAINBOW MOSQUE",
+                "Barangay Sibulao",
+                "",
+                "Countryside road",
+                "Daytime",
+                bullets("Swimming", "Trekking"),
+                bullets("Cottages"),
+                bullets("PHP 20 - PHP 50"),
+                CATEGORY_RELIGIOUS,
+                R.drawable.rainbowmosque
+        ));
+        allLandmarks.add(new Landmark(
+                "TALUKSANGAY MOSQUE",
+                "Barangay Sibulao",
+                "",
+                "Countryside road",
+                "Daytime",
+                bullets("Swimming", "Trekking"),
+                bullets("Cottages"),
+                bullets("PHP 20 - PHP 50"),
+                CATEGORY_RELIGIOUS,
+                R.drawable.taluksangaymosque
+        ));
+        allLandmarks.add(new Landmark(
+                "METROPOLITAN CATHEDRAL OF THE IMMACULATE CONCEPTION",
+                "Barangay Sibulao",
+                "",
+                "Countryside road",
+                "Daytime",
+                bullets("Swimming", "Trekking"),
+                bullets("Cottages"),
+                bullets("PHP 20 - PHP 50"),
+                CATEGORY_RELIGIOUS,
+                R.drawable.metrocathedral
         ));
     }
 
