@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
                 "Pasonanca Park (Maria Clara Lobregat Complex), Zamboanga City",
                 "A peaceful heritage attraction, unique elevated wooden structure offering scenic views of the surrounding forest in Pasonanca Park.",
                 "Scout Limbaga (Boys Scout)",
-                "8:00 AM – 5:00 PM (May vary)",
+                "May vary; often listed around daytime business hours",
                 bullets("Sightseeing", "Photo taking", "Nature appreciation"),
                 bullets("Viewing areas", "Park access", "Nearby picnic areas", "resting spots"),
                 bullets("Free"),
@@ -98,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
         ));
         allLandmarks.add(new Landmark(
                 "GREAT STA. CRUZ ISLAND",
-                "Sta. Cruz Bank, Basilan Strait",
+                "Sta. Cruz Islands, Basilan Strait, off Zamboanga City (via Paseo del Mar Boat Terminal)",
                 "Famous for its rare pink sand beach caused by crushed red corals, one of the most unique beaches in the Philippines.",
                 "Paseo del Mar (Boat Terminal)",
                 "7:00 AM - 2:00 PM",
@@ -110,10 +110,10 @@ public class MainActivity extends AppCompatActivity {
         ));
         allLandmarks.add(new Landmark(
                 "ZAMBOANGA CITY HALL",
-                "Valderrosa St., Zamboanga City",
+                "N.S. Valderrosa Street, Zone IV, Zamboanga City",
                 "A historic government building reflecting Spanish-era architecture and local governance.",
                 "Plaza Rizal",
-                "8:00 AM – 5:00 PM (Weekdays)",
+                "Weekdays, office hours; may vary by office and holidays",
                 bullets("Heritage sightseeing", "Photo taking"),
                 bullets("Government services", "Nearby restaurants and transport"),
                 bullets("Free"),
@@ -123,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
         allLandmarks.add(new Landmark(
                 "FORT PILAR",
                 "Fort Pilar, Valderosa St., Sta Barbara, Zamboanga City",
-                "A 17th-century Spanish-era fort and shrine.",
+                "A historic Spanish-era fort that also serves as a religious shrine and cultural landmark. It is one of the most iconic attractions in Zamboanga City and a must-visit for those interested in history and heritage.",
                 "Paseo del Mar",
                 "Approximately 7:00 AM – 5:00 PM",
                 bullets("Prayer visit", "Museum visit", "Sightseeing"),
@@ -146,10 +146,10 @@ public class MainActivity extends AppCompatActivity {
         ));
         allLandmarks.add(new Landmark(
                 "EL MUSEO DE ZAMBOANGA",
-                "219 Pasonanca Road, Pasonanca, Zamboanga City, 7000 Zamboanga del Sur",
+                "Pasonanca Park (Maria Clara Lobregat Complex), Pasonanca Road, Zamboanga City",
                 "A cultural museum showcasing Zamboanga’s history focusing on its warfare and indigenous technology, tools, and instruments.",
                 "Pasonanca Butterfly Garden",
-                "8:00 AM – 5:00 PM",
+                "8:00 AM – 5:00 PM, Monday to Friday",
                 bullets("Museum tours", "Cultural learning", "Photo taking"),
                 bullets("Guided exhibit information", "Educational displays"),
                 bullets("Free"),
@@ -158,7 +158,7 @@ public class MainActivity extends AppCompatActivity {
         ));
         allLandmarks.add(new Landmark(
                 "ONCE ISLAS",
-                "Barangay Panubigan",
+                "Barangay Panubigan, East Coast Road, Zamboanga City (jump-off point: Panubigan Port)",
                 "A protected island-hopping destination known for clear waters, scenic beaches, and quiet coastal views. A group of 11 scenic islands with white sand beaches and marine biodiversity.",
                 "Panubigan Port",
                 "7:00 AM - 2:00 PM",
@@ -170,9 +170,9 @@ public class MainActivity extends AppCompatActivity {
         ));
         allLandmarks.add(new Landmark(
                 "SACOL ISLAND",
-                "Sacol Island, Zamboanga City",
-                "A peaceful island area with coastal communities, beaches, and wide sea views.",
-                "Accessible via Paseo del Mar",
+                "Sacol Island, off the coast of Zamboanga City (accessible via Paseo del Mar or private boat arrangements)",
+                "A quiet island destination known for its calm waters, natural surroundings, and relaxing beach experience. It is ideal for visitors looking for a peaceful escape away from the busy city center.",
+                "Paseo del Mar (jump-off point)",
                 "Day trips",
                 bullets("Beach visit", "Swimming", "Sightseeing", "Relaxation"),
                 bullets("Boat transfers", "Local food stalls"),
@@ -182,10 +182,10 @@ public class MainActivity extends AppCompatActivity {
         ));
         allLandmarks.add(new Landmark(
                 "PASEO DEL MAR",
-                "Beside Fort Pilar",
+                "N.S. Valderrosa Street, Sta. Barbara, Zamboanga City (beside Fort Pilar)",
                 "A seaside promenade where visitors can enjoy sunset views, food stalls, and access to island boat trips.",
                 "Fort Pilar",
-                "8:00 AM – 10:00 PM",
+                "8:00 AM – 10:00 PM, evening is the peak visiting time",
                 bullets("Sunset viewing", "Food trip", "Walking", "Boat rides"),
                 bullets("Restaurants", "Boat terminal", "Souvenir areas"),
                 bullets("Entrance: Free", "Meals/snacks: Depends on the store or restaurant you eat at", "Boat trips: Separate cost if booking island tours"),
@@ -194,8 +194,8 @@ public class MainActivity extends AppCompatActivity {
         ));
         allLandmarks.add(new Landmark(
                 "AZZURA BEACH RESORT",
-                "36QP+77H, Zamboanga City, Zamboanga del Sur",
-                "A private beach resort with amenities and relaxing environment.",
+                "Bolong Beach Area, Bolong, Zamboanga City",
+                "A private beach resort known for its relaxing seaside atmosphere, resort amenities, and family-friendly environment. It is a popular choice for swimming, picnics, and short leisure getaways.",
                 "Bolong Beach",
                 "8:00 AM – 5:00 PM",
                 bullets("Swimming", "Kayak rides", "Picnics"),
@@ -206,9 +206,9 @@ public class MainActivity extends AppCompatActivity {
         ));
         allLandmarks.add(new Landmark(
                 "CESAR CLIMACO FREEDOM PARK",
-                "X37G+RF7 Cesar Climaco Freedom Park, Zamboanga City, 7000 Zamboanga del Sur",
+                "Abong-Abong, Barangay Pasonanca/Lunzuran, Zamboanga City",
                 "A scenic public park honoring Mayor Cesar Climaco. Visitors can enjoy beautiful green spaces, walking paths, and vibrant gardens, making it an ideal spot for relaxation and leisurely strolls. The park also features playgrounds and areas for picnics, attracting both locals and tourists. Its tranquil atmosphere and picturesque scenery provide an excellent backdrop for various outdoor activities.",
-                "Helmet Tomb and Cruz Mayor",
+                "Abong-Abong Pilgrimage Site and Cruz Mayor",
                 "Open 24 hours",
                 bullets("Walking", "Relaxing", "Sightseeing"),
                 bullets("Benches", "Open space"),
@@ -219,7 +219,7 @@ public class MainActivity extends AppCompatActivity {
         allLandmarks.add(new Landmark(
                 "TAGBILAT FALLS",
                 "Malagandis, Titay, Zamboanga Sibugay",
-                "A hidden natural waterfall ideal for adventure seekers.",
+                "A hidden natural waterfall surrounded by greenery, ideal for travelers seeking a more adventurous and less crowded destination. It is best known for its refreshing waters and peaceful natural setting.",
                 "Forest trails",
                 "Day time",
                 bullets("Trekking", "Swimming"),
@@ -231,8 +231,8 @@ public class MainActivity extends AppCompatActivity {
         allLandmarks.add(new Landmark(
                 "NANCY FALLS",
                 "Km27, Upper La Paz, Zamboanga City",
-                "A quiet waterfall destination with natural surroundings.",
-                "Local trails",
+                "A quiet waterfall attraction known for its simple, natural charm and calm surroundings. It is a good spot for relaxation, swimming, and enjoying the countryside atmosphere of Zamboanga.",
+                "Countryside trails and nearby farming communities",
                 "Day time",
                 bullets( "Swimming", "Relaxation"),
                 bullets("Limited"),
@@ -242,45 +242,45 @@ public class MainActivity extends AppCompatActivity {
         ));
         allLandmarks.add(new Landmark(
                 "PLAZA PERSHING",
-                "Don Pablo Lorenzo St, Zamboanga City",
+                "Don Pablo Lorenzo Street, Zamboanga City",
                 "A central city plaza that has a gazebo like structure set on a park. Plaza Pershing was named after American General John \"Blackjack\" Pershing who was then a Captain in the 15th Cavalry Regiment (and the 1st Cavalry) during the counter-insurgency of the Philippine-American War.",
-                "University of Zamboanga Campus",
+                "Zamboanga City Hall and University of Zamboanga Campus",
                 "Open 24 hours",
                 bullets("Walking", "Relaxation"),
                 bullets("Public space"),
                 bullets("Free"),
-                CATEGORY_PARKS_NATURE,
+                CATEGORY_HISTORICAL,
                 R.drawable.plazapershing
         ));
         allLandmarks.add(new Landmark(
                 "CANELAR BARTER TRADE CENTER",
-                "Canelar District",
-                "Known as an imported goods market and trade area.",
-                "Canelar commercial area",
+                "Canelar District, Zamboanga City",
+                "A busy shopping area known for imported goods, local products, and bargain finds. It is a go-to destination for visitors who want to experience local trade and buy souvenirs or affordable items.",
+                "Canelar Commercial Area and downtown Zamboanga",
                 "8:00 AM – 6:00 PM",
                 bullets("Shopping"),
                 bullets("Retail stalls"),
                 bullets("Depends on purchases"),
-                CATEGORY_RELIGIOUS,
+                CATEGORY_MARKETS,
                 R.drawable.canelarbartertc
         ));
         allLandmarks.add(new Landmark(
                 "PASONANCA BUTTERFLY GARDEN",
-                "Pasonanca Park",
-                "Garden showcasing various butterfly species and nature.",
-                "Antonio's Mercato",
+                "Pasonanca Park (Maria Clara Lobregat Complex), Pasonanca Road, Zamboanga City",
+                "A nature attraction inside Pasonanca Park that features butterflies and a peaceful garden environment. It is ideal for visitors who enjoy nature viewing, photography, and eco-tourism experiences.",
+                "Pasonanca Park and Pasonanca Swimming Pool",
                 "8:00 AM – 6:00 PM",
                 bullets("Nature viewing", "Photography"),
                 bullets("Guided tours"),
                 bullets("PHP 20 - PHP 50"),
-                CATEGORY_PARKS_NATURE,
+                CATEGORY_WILDLIFE_ECO,
                 R.drawable.butterflygarden
         ));
         allLandmarks.add(new Landmark(
                 "PASONANCA PARK",
-                "Pasonanca District",
-                "",
-                "Antonio's Mercato",
+                "Pasonanca Road, Zamboanga City",
+                "One of the most popular nature parks in Zamboanga City, known for its lush greenery, cool atmosphere, and family-friendly outdoor spaces. It is often visited for leisure walks, picnics, and nature appreciation.",
+                "Scout Limbaga and Pasonanca Swimming Pool",
                 "6:00 AM – 6:00 PM",
                 bullets("Nature walks", "Sightseeing"),
                 bullets("Park facilities"),
@@ -290,20 +290,20 @@ public class MainActivity extends AppCompatActivity {
         ));
         allLandmarks.add(new Landmark(
                 "ZSCMST BIRD SANCTUARY",
-                "ZSCMST campus area",
-                "",
-                "University Campus",
+                "Zamboanga State College of Marine Sciences and Technology (ZSCMST), Baliwasan, Zamboanga City",
+                "A protected eco-tourism site known for its bird habitat, mangrove environment, and educational value. It is a great destination for birdwatching and learning about local biodiversity and wetland conservation.",
+                "ZSCMST Campus, Fort Pilar, and Paseo del Mar",
                 "Daytime",
                 bullets("Birdwatching"),
                 bullets("Educational visits"),
                 bullets("Minimal"),
-                CATEGORY_PARKS_NATURE,
+                CATEGORY_WILDLIFE_ECO,
                 R.drawable.birdsanctuary
         ));
         allLandmarks.add(new Landmark(
                 "MERLOQUET FALLS",
-                "Barangay Sibulao",
-                "",
+                "Sitio Merloquet, Barangay Sibulao, Zamboanga City",
+                "A beautiful tiered waterfall surrounded by forest, known for its refreshing waters and scenic natural setting. It is a favorite destination for trekking, swimming, and enjoying an outdoor adventure.",
                 "Countryside road",
                 "Daytime",
                 bullets("Swimming", "Trekking"),
@@ -314,49 +314,49 @@ public class MainActivity extends AppCompatActivity {
         ));
         allLandmarks.add(new Landmark(
                 "YAKAN WEAVING VILLAGE",
-                "Upper Calarian",
-                "",
-                "Coastal tourism corridor",
+                "Upper Calarian, Zamboanga City (along West Coast Road)",
+                "A cultural destination where visitors can see the traditional weaving skills of the Yakan people and purchase handmade crafts. It is one of the best places in the city to experience local artistry and heritage.",
+                "West Coast Road and nearby souvenir shops",
                 "8:00 AM – 5:00 PM",
                 bullets("Weaving demonstrations", "Souvenir shopping"),
                 bullets("Handicrafts"),
                 bullets("Free entry"),
-                CATEGORY_WATERFALLS,
+                CATEGORY_CULTURAL,
                 R.drawable.yakanweavingvillage
         ));
         allLandmarks.add(new Landmark(
                 "RAINBOW MOSQUE",
-                "Barangay Sibulao",
-                "",
-                "Countryside road",
-                "Daytime",
-                bullets("Swimming", "Trekking"),
-                bullets("Cottages"),
-                bullets("PHP 20 - PHP 50"),
+                "Barangay Sta. Maria, along Tumaga Road / Veterans Avenue Extension, Zamboanga City",
+                "A colorful and visually striking mosque known for its vibrant design and cultural significance. It is one of the most recognizable religious landmarks in Zamboanga City and is often admired for its unique architecture.",
+                "Tumaga Road and Veterans Avenue Extension",
+                "During prayer times",
+                bullets("Prayer", "Sightseeing"),
+                bullets("Mosque facilities"),
+                bullets("Free"),
                 CATEGORY_RELIGIOUS,
                 R.drawable.rainbowmosque
         ));
         allLandmarks.add(new Landmark(
                 "TALUKSANGAY MOSQUE",
-                "Barangay Sibulao",
-                "",
-                "Countryside road",
-                "Daytime",
-                bullets("Swimming", "Trekking"),
-                bullets("Cottages"),
-                bullets("PHP 20 - PHP 50"),
+                "Barangay Taluksangay, West Coast Road, Zamboanga City",
+                "A historic mosque known as one of the oldest Islamic landmarks in the region. It reflects the long-standing Muslim heritage of Zamboanga and is an important site for cultural and religious visits.",
+                "Taluksangay Fishing Village and West Coast Road",
+                "During prayer times",
+                bullets("Prayer", "Cultural visit"),
+                bullets("Mosque facilities"),
+                bullets("Free"),
                 CATEGORY_RELIGIOUS,
                 R.drawable.taluksangaymosque
         ));
         allLandmarks.add(new Landmark(
                 "METROPOLITAN CATHEDRAL OF THE IMMACULATE CONCEPTION",
-                "Barangay Sibulao",
-                "",
-                "Countryside road",
-                "Daytime",
-                bullets("Swimming", "Trekking"),
-                bullets("Cottages"),
-                bullets("PHP 20 - PHP 50"),
+                "La Purisima Street, Zamboanga City",
+                "A major Catholic landmark in Zamboanga City known for its impressive architecture and spiritual importance. It serves as a significant place of worship and a symbol of the city’s religious heritage.",
+                "Ateneo de Zamboanga University and SM City Mindpro",
+                "Open daily (varies with mass schedule)",
+                bullets("Prayer", "Sightseeing", "Architectural appreciation"),
+                bullets("Worship services", "Visitor access", "Seating areas", "Informational displays"),
+                bullets("Free"),
                 CATEGORY_RELIGIOUS,
                 R.drawable.metrocathedral
         ));
