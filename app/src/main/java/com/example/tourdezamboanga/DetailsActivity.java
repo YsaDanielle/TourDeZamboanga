@@ -3,11 +3,13 @@ package com.example.tourdezamboanga;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.widget.NestedScrollView;
 
 import com.google.android.material.button.MaterialButton;
 
@@ -29,6 +31,7 @@ public class DetailsActivity extends AppCompatActivity {
         ImageView detailImage = findViewById(R.id.detailImage);
         ImageButton btnBack = findViewById(R.id.btnBack);
         MaterialButton btnViewMap = findViewById(R.id.btnViewMap);
+        NestedScrollView detailScroll = findViewById(R.id.main);
 
         Intent intent = getIntent();
         String name = intent.getStringExtra("name");
@@ -39,6 +42,7 @@ public class DetailsActivity extends AppCompatActivity {
         String activities = intent.getStringExtra("activities");
         String services = intent.getStringExtra("services");
         String estimatedCosts = intent.getStringExtra("estimatedCosts");
+        String mapQuery = intent.getStringExtra("mapQuery");
         int image = intent.getIntExtra("image", R.drawable.blurrycityhall);
 
         detailTitle.setText(name != null ? name : getString(R.string.app_name));
@@ -52,23 +56,47 @@ public class DetailsActivity extends AppCompatActivity {
         detailImage.setImageResource(image);
 
         btnBack.setOnClickListener(v -> getOnBackPressedDispatcher().onBackPressed());
-        btnViewMap.setOnClickListener(v -> openMap(location, name));
+        btnViewMap.setOnClickListener(v -> openMap(mapQuery, location, name));
+        detailScroll.setOnGenericMotionListener((v, event) -> scrollWithWheelOrTrackpad(detailScroll, event));
     }
 
-    private void openMap(String location, String name) {
-        String destination = location;
+    private void openMap(String mapQuery, String location, String name) {
+        String destination = mapQuery;
         if (destination == null || destination.trim().isEmpty()) {
-            destination = name != null ? name : "Zamboanga City";
+            destination = location;
+        }
+        if (destination == null || destination.trim().isEmpty()) {
+            destination = name != null ? name + ", Zamboanga City" : "Zamboanga City";
         }
 
-        Uri geoUri = Uri.parse("geo:0,0?q=" + Uri.encode(destination));
-        Intent mapIntent = new Intent(Intent.ACTION_VIEW, geoUri);
+        Uri mapsUri = Uri.parse("https://www.google.com/maps/search/?api=1&query=" + Uri.encode(destination));
+        Intent mapIntent = new Intent(Intent.ACTION_VIEW, mapsUri);
         mapIntent.setPackage("com.google.android.apps.maps");
 
         if (mapIntent.resolveActivity(getPackageManager()) != null) {
             startActivity(mapIntent);
         } else {
-            startActivity(new Intent(Intent.ACTION_VIEW, geoUri));
+            startActivity(new Intent(Intent.ACTION_VIEW, mapsUri));
         }
+    }
+
+    private boolean scrollWithWheelOrTrackpad(NestedScrollView scrollView, MotionEvent event) {
+        if (event.getAction() != MotionEvent.ACTION_SCROLL) {
+            return false;
+        }
+
+        float verticalScroll = event.getAxisValue(MotionEvent.AXIS_VSCROLL);
+        if (verticalScroll == 0f) {
+            return false;
+        }
+
+        scrollView.smoothScrollBy(0, Math.round(-verticalScroll * 140));
+        return true;
+    }
+
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.fade_slide_back_in, R.anim.fade_slide_back_out);
     }
 }

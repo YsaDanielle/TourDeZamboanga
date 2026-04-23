@@ -4,10 +4,14 @@ import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.animation.DecelerateInterpolator;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -72,6 +76,14 @@ public class MainActivity extends AppCompatActivity {
         };
 
         recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
+        DefaultItemAnimator itemAnimator = new DefaultItemAnimator();
+        itemAnimator.setAddDuration(240);
+        itemAnimator.setRemoveDuration(180);
+        itemAnimator.setMoveDuration(240);
+        itemAnimator.setChangeDuration(180);
+        itemAnimator.setSupportsChangeAnimations(false);
+        recyclerView.setItemAnimator(itemAnimator);
+        recyclerView.setOnGenericMotionListener((v, event) -> scrollWithWheelOrTrackpad(recyclerView, event));
 
         loadLandmarks();
         adapter = new LandmarkAdapter(allLandmarks, this);
@@ -376,7 +388,10 @@ public class MainActivity extends AppCompatActivity {
     private void setupCategoryButtons() {
         for (int i = 0; i < categoryButtons.length; i++) {
             String category = categoryValues[i];
-            categoryButtons[i].setOnClickListener(v -> selectCategory(category));
+            categoryButtons[i].setOnClickListener(v -> {
+                animatePress(v);
+                selectCategory(category);
+            });
         }
     }
 
@@ -398,6 +413,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void selectCategory(String category) {
+        if (category.equals(selectedCategory)) {
+            return;
+        }
+
         selectedCategory = category;
         updateCategorySelection();
         filterLandmarks();
@@ -447,5 +466,33 @@ public class MainActivity extends AppCompatActivity {
         int textColor = ContextCompat.getColor(this, isSelected ? android.R.color.white : R.color.text);
         button.setBackgroundTintList(ColorStateList.valueOf(backgroundColor));
         button.setTextColor(textColor);
+    }
+
+    private void animatePress(View view) {
+        view.animate()
+                .scaleX(0.96f)
+                .scaleY(0.96f)
+                .setDuration(70)
+                .withEndAction(() -> view.animate()
+                        .scaleX(1f)
+                        .scaleY(1f)
+                        .setDuration(120)
+                        .setInterpolator(new DecelerateInterpolator())
+                        .start())
+                .start();
+    }
+
+    private boolean scrollWithWheelOrTrackpad(RecyclerView recyclerView, MotionEvent event) {
+        if (event.getAction() != MotionEvent.ACTION_SCROLL) {
+            return false;
+        }
+
+        float verticalScroll = event.getAxisValue(MotionEvent.AXIS_VSCROLL);
+        if (verticalScroll == 0f) {
+            return false;
+        }
+
+        recyclerView.smoothScrollBy(0, Math.round(-verticalScroll * 140));
+        return true;
     }
 }

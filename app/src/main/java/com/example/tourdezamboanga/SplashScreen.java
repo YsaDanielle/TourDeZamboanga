@@ -2,34 +2,36 @@ package com.example.tourdezamboanga;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class SplashScreen extends AppCompatActivity {
 
-    private final Handler handler = new Handler(Looper.getMainLooper());
-    private final Runnable navigateToMain = this::launchMain;
+    private boolean isLaunching;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
 
-        findViewById(android.R.id.content).setOnClickListener(v -> launchMain());
-        handler.postDelayed(navigateToMain, 1800);
+        findViewById(R.id.main).setOnClickListener(v -> launchMain(v));
     }
 
-    @Override
-    protected void onDestroy() {
-        handler.removeCallbacks(navigateToMain);
-        super.onDestroy();
-    }
+    private void launchMain(View splashRoot) {
+        if (isLaunching) {
+            return;
+        }
 
-    private void launchMain() {
-        handler.removeCallbacks(navigateToMain);
-        startActivity(new Intent(this, MainActivity.class));
-        finish();
+        isLaunching = true;
+        splashRoot.animate()
+                .alpha(0f)
+                .setDuration(220)
+                .withEndAction(() -> {
+                    startActivity(new Intent(this, MainActivity.class));
+                    overridePendingTransition(R.anim.fade_slide_in, R.anim.fade_slide_out);
+                    finish();
+                })
+                .start();
     }
 }

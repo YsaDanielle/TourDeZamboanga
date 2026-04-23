@@ -9,6 +9,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
@@ -41,17 +43,18 @@ public class LandmarkAdapter extends RecyclerView.Adapter<LandmarkAdapter.ViewHo
         Glide.with(context).load(landmark.getImage()).into(holder.imgLandmark);
 
         holder.itemView.setOnClickListener(v -> {
-            Intent intent = new Intent(context, DetailsActivity.class);
-            intent.putExtra("name", landmark.getName());
-            intent.putExtra("location", landmark.getLocation());
-            intent.putExtra("description", landmark.getDescription());
-            intent.putExtra("landmarkNotes", landmark.getLandmarkNotes());
-            intent.putExtra("openingHours", landmark.getOpeningHours());
-            intent.putExtra("activities", landmark.getActivities());
-            intent.putExtra("services", landmark.getServices());
-            intent.putExtra("estimatedCosts", landmark.getEstimatedCosts());
-            intent.putExtra("image", landmark.getImage());
-            context.startActivity(intent);
+            holder.itemView.setEnabled(false);
+            v.animate()
+                    .scaleX(0.97f)
+                    .scaleY(0.97f)
+                    .setDuration(70)
+                    .withEndAction(() -> v.animate()
+                            .scaleX(1f)
+                            .scaleY(1f)
+                            .setDuration(120)
+                            .withEndAction(() -> openDetails(landmark, holder.itemView))
+                            .start())
+                    .start();
         });
     }
 
@@ -61,9 +64,60 @@ public class LandmarkAdapter extends RecyclerView.Adapter<LandmarkAdapter.ViewHo
     }
 
     public void submitList(List<Landmark> newLandmarks) {
+        List<Landmark> oldLandmarks = new ArrayList<>(landmarkList);
         landmarkList.clear();
         landmarkList.addAll(newLandmarks);
-        notifyDataSetChanged();
+
+        DiffUtil.calculateDiff(new DiffUtil.Callback() {
+            @Override
+            public int getOldListSize() {
+                return oldLandmarks.size();
+            }
+
+            @Override
+            public int getNewListSize() {
+                return landmarkList.size();
+            }
+
+            @Override
+            public boolean areItemsTheSame(int oldItemPosition, int newItemPosition) {
+                return oldLandmarks.get(oldItemPosition)
+                        .getName()
+                        .equals(landmarkList.get(newItemPosition).getName());
+            }
+
+            @Override
+            public boolean areContentsTheSame(int oldItemPosition, int newItemPosition) {
+                Landmark oldItem = oldLandmarks.get(oldItemPosition);
+                Landmark newItem = landmarkList.get(newItemPosition);
+                return oldItem.getName().equals(newItem.getName())
+                        && oldItem.getLocation().equals(newItem.getLocation())
+                        && oldItem.getDescription().equals(newItem.getDescription())
+                        && oldItem.getCategory().equals(newItem.getCategory())
+                        && oldItem.getImage() == newItem.getImage();
+            }
+        }).dispatchUpdatesTo(this);
+    }
+
+    private void openDetails(Landmark landmark, View itemView) {
+        Intent intent = new Intent(context, DetailsActivity.class);
+        intent.putExtra("name", landmark.getName());
+        intent.putExtra("location", landmark.getLocation());
+        intent.putExtra("description", landmark.getDescription());
+        intent.putExtra("landmarkNotes", landmark.getLandmarkNotes());
+        intent.putExtra("openingHours", landmark.getOpeningHours());
+        intent.putExtra("activities", landmark.getActivities());
+        intent.putExtra("services", landmark.getServices());
+        intent.putExtra("estimatedCosts", landmark.getEstimatedCosts());
+        intent.putExtra("mapQuery", landmark.getName() + ", " + landmark.getLocation());
+        intent.putExtra("image", landmark.getImage());
+        context.startActivity(intent);
+
+        if (context instanceof AppCompatActivity) {
+            ((AppCompatActivity) context).overridePendingTransition(R.anim.fade_slide_in, R.anim.fade_slide_out);
+        }
+
+        itemView.setEnabled(true);
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
